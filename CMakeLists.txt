@@ -28,12 +28,11 @@ target_include_directories(${EXECUTABLE_EXE_NAME}
         ${PROJECT_SOURCE_DIR}/include/benchmark
 )
 
-target_link_libraries(${EXECUTABLE_EXE_NAME} benchmark.lib)
-target_link_libraries(${EXECUTABLE_EXE_NAME} benchmark_main.lib)
-
 if (MSVC)
 target_link_libraries(${EXECUTABLE_EXE_NAME} Shlwapi.lib) # 链接库
+target_link_libraries(${EXECUTABLE_EXE_NAME} benchmark.lib)
+target_link_libraries(${EXECUTABLE_EXE_NAME} benchmark_main.lib)
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /W4") # 设置警告等级为4
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /WX") # 设置警告视为错误
+# set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /WX") # 设置警告视为错误
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /std:c++latest") # 设置使用最新C++标准
 endif (MSVC)
