@@ -4,10 +4,14 @@
 
 ## 编译
 > mkdir build
+>
 > cd build
+>
 > cmake ..
+>
 > MSBuild.exe my_benchmakr_template.sln -p:Configuration=Release  -t:Rebuild
 
 ## 运行
 > cd build\Release
+>
 > .\my_benchmark_template.exe
