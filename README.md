@@ -9,7 +9,7 @@
 >
 > cmake ..
 >
-> MSBuild.exe my_benchmakr_template.sln -p:Configuration=Release  -t:Rebuild
+> MSBuild.exe my_benchmark_template.sln -p:Configuration=Release  -t:Rebuild
 
 ## 运行
 > cd build\Release
